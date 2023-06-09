@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    float i,ingresso,qtdeingresso,lucro;
+        printf("Ingresso    Qtde de ingresso    lucro");
+    while(i<9)
+    {
+        ingresso=5-(i*0.5);
+        qtdeingresso=(120+(i*26));
+        lucro=ingresso*qtdeingresso-200;
+        printf("\n R$%.2f          %.0f           R$%.2f",ingresso,qtdeingresso,lucro);
+        i++;
+    }
+
+    return 0;
+}
