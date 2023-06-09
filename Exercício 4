@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    int i,num,resultado;
+
+    printf("Insira um numero: \n");
+    scanf("%d",&num);
+    while(i<=10)
+    {
+        resultado=num*i;
+        printf("%d x %d = %d\n",num,i,resultado);
+        i++;
+    }
+
+    return 0;
+}
