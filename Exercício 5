@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    int i=1,j,resultado;
+
+    while(i<=10)
+    {
+        for(j=0;j<=10;j++)
+        {
+            resultado=i*j;
+            printf("%d x %d = %d\n",i,j,resultado);
+        }
+        printf("\n\n");
+        i++;
+    }
+
+    return 0;
+}
