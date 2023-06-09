@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    int i,idade=0,qtde1=0,qtde2=0,qtde3=0,qtde4=0,qtde5=0;
+    float porcentagem1,porcentagem5;
+    for(i=0;i<8;i++)
+    {
+        printf("%d - Insira uma idade: \n",i+1);
+        scanf("%d",&idade);
+        if(idade<=15)
+            qtde1++;
+        if(idade>=16 && idade<=30)
+            qtde2++;
+        if(idade>=31 && idade<=45)
+            qtde3++;
+        if(idade>=46 && idade<=60)
+            qtde4++;
+        if(idade>60)
+            qtde5++;
+    }
+    porcentagem1=(qtde1*100)/(qtde1+qtde2+qtde3+qtde4+qtde5);
+    porcentagem5=(qtde5*100)/(qtde1+qtde2+qtde3+qtde4+qtde5);
+    printf("Ate 15 anos: %d\nDe 16 a 30 anos: %d\nDe 31 a 45 Anos: %d\nDe 46 a 60 anos: %d\nAcima de 60 anos: %d",qtde1,qtde2,qtde3,qtde4,qtde5);
+    printf("\n%.2f por cento das pessoas estao na primeira faixa.",porcentagem1);
+    printf("\n%.2f por cento das pessoas estao na ultima faixa.",porcentagem5);
+
+    return 0;
+}
