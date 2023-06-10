@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int idade=0,peso=0,i,contadoridade50=0,contadoridade1020=0,contadorpeso40=0,porcentagempeso40=0;
+    float altura=0,media=0,acumuladoraltura1020=0;
+
+    for(i=0;i<5;i++)
+    {
+        printf("Insira uma idade: \n");
+        scanf("%d",&idade);
+        printf("Insira uma altura: \n");
+        scanf("%f",&altura);
+        printf("Insira um peso: \n");
+        scanf("%d",&peso);
+        if(idade>50)
+             contadoridade50++;
+        if(idade>=10 && idade<=20)
+        {
+            contadoridade1020++;
+            acumuladoraltura1020=acumuladoraltura1020+altura;
+        }
+
+        if(peso<40)
+            contadorpeso40++;
+
+    }
+    porcentagempeso40=(contadorpeso40*100)/5;
+    media=acumuladoraltura1020/contadoridade1020;
+    printf("Ha %d pessoas acima de 50 anos.\nA media das alturas das pessoas entre 10 e 20 anos eh: %.2f.\nHa %d por cento de pessoas com peso inferior a 40kg.\n",contadoridade50,media,porcentagempeso40);
+    return 0;
+}
