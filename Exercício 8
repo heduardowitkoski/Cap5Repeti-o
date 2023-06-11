@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i=0,idade=0,peso=0,contador1=0,contador2=0,acumulador2=0,contador3=0,contador4=0,media=0;
+    float altura=0,porcentagem=0;
+    char olho,cabelo;
+
+    while(i<6)
+    {
+        printf("Insira a idade: \n");
+        scanf("%d",&idade);
+        printf("Insira o peso: \n");
+        scanf("%d",&peso);
+        printf("Insira a altura: \n");
+        scanf("%f",&altura);
+        printf("Insira a cor dos olhos:\na-azul\np-preto\nv-verde\nc-castanho\n");
+        scanf(" %c",&olho);
+        printf("Insira a cor dos cabelos:\np-preto\nc-castanho\nl-louro\nr-ruivo\n");
+        scanf(" %c",&cabelo);
+
+        if(idade>50 && peso<60)
+            contador1++;
+        if(altura<1.50)
+        {
+            acumulador2=acumulador2+idade;
+            contador2++;
+        }
+        if(olho=='a')
+            contador3++;
+        if(cabelo=='r' && olho!='a')
+            contador4++;
+
+
+        i++;
+    }
+    media=acumulador2/contador2;
+    porcentagem=(contador3*100)/6;
+    printf("A quantidade de pessoas com idade superior a 50 anos e peso inferior a 60kg: %d\n",contador1);
+    printf("A media das idades das pessoas com altura inferior a 1.50m: %d\n",media);
+    printf("A porcentagem de pessoas com olhos azuis entre todas as pessoas analisadas: %.2f por cento\n",porcentagem);
+    printf("A quantidade de pessoas ruivas e que nao possuem olhos azuis: %d",contador4);
+
+
+    return 0;
+}
